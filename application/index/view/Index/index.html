@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="referrer" content="never">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{:lang('捐赠平台')}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+	<style type="text/css">
+		.file {
+		    position: relative;
+		    display: inline-block;
+		    background: #D0EEFF;
+		    border: 1px solid #99D3F5;
+		    border-radius: 4px;
+		    padding: 4px 12px;
+		    overflow: hidden;
+		    color: #1E88C7;
+		    text-decoration: none;
+		    text-indent: 0;
+		    line-height: 20px;
+		}
+		.file input {
+		    position: absolute;
+		    font-size: 100px;
+		    right: 0;
+		    top: 0;
+		    opacity: 0;
+		}
+		.file:hover {
+		    background: #AADFFD;
+		    border-color: #78C3F3;
+		    color: #004974;
+		    text-decoration: none;
+		}
+		.form-group{
+			display: flex;
+			justify-content: space-between;
+		}
+		.content{
+			width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+		}
+		.contentRight{
+			width: 48%;
+			
+		}
+		.contentLeft{
+			width: 50%;
+		}
+		.top_news{
+			width: 1200px;
+			height: 300px;
+			margin: 0 auto;
+		}
+		.top_news img{
+			width: 100%;
+			height: 100%;
+		}
+		.text{
+			height: ;
+		}
+		.product{
+			margin-top: 40px;
+		}
+		.paypal{
+			text-align: center;
+			margin: 30px 0;
+			font-size: 22px;
+		}
+	</style>
+</head>
+
+<body id="home">
+    <div id="header">
+        <a href="" style="margin-top: 10px">{:lang('上海让雷智能科技有限公司')}</a>
+        <div class="lang" style="float: right">Language
+            <select id="jumpMenu">
+                    {if $data == 'en'}
+					<option value="zn" lang="zh" >Chinese</option>
+					<option value="en" lang="en" selected="selected">English</option>
+					<option value="sh" lang="sh" >Spanish</option>
+					<option value="fh" lang="fh" >French</option>
+
+				{elseif $data == 'fh'}
+					<option value="zn" lang="zh" >Chinese</option>
+					<option value="en" lang="en">English</option>
+					<option value="sh" lang="sh" >Spanish</option>
+					<option value="fh" lang="fh" selected="selected">French</option>
+
+				{elseif $data=='sh'}
+					<option value="zn" lang="zh" >Chinese</option>
+					<option value="en" lang="en">English</option>
+					<option value="sh" lang="sh" selected="selected">Spanish</option>
+					<option value="fh" lang="fh">French</option>
+
+				{else /}
+					<option value="zn" lang="zh" selected="selected">Chinese</option>
+					<option value="en" lang="en">English</option>
+					<option value="sh" lang="sh">Spanish</option>
+					<option value="fh" lang="fh">French</option>
+				{/if}
+            </select>
+        </div>
+    </div>
+
+    <div class="top_news" style="margin-top:10px">
+        <img src="/img/xuanchuan.png">
+    </div>
+
+    <div id="wrap">
+        <div class="content">
+			<div class="contentLeft">
+				<div class="text">
+					<h3>{:lang('公司简介')}</h3>
+					<p>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;与时信息科技是一家以高科技数码产品开发为主导，集移动电话、平板电脑、工业电脑、数码影像产品研发、生产、销售、服务于一体的高科技企业;公司拥有一批高级工程技术人才，具有较强的软件、硬件、结构设计开发及生产能力。
+						
+						与时信息科技是一家专业化手持式产品设计公司。主要致力于远程移动终端研发，同时紧紧围绕人性化多功能产品大市场进行战略研究。公司核心管理及技术骨干全部来自于国内、国际知名的通信技术企业，在移动射频系统、基带电路、PCB Layout、工业设计(ID)、结构设计(MD)、软件设计(SW)、生产制造(YUS产品)测试(TE)、品质保障(QA)等领域拥有丰富的从业经验，可根据客户的需求提供定制的解决方案。通过对市场的调查和分析，制订了符合市场发展需求的产品发展路线，力图依靠创新的设计理念、采用先进的芯片构架、完整的解决方案和完善的服务成为一流的手持式方案供应商
+					</p>
+				</div>
+			</div>
+			<div class="contentRight">
+				<div class="text">
+					<h3>{:lang('活动目的')}</h3>
+					<p>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;与时信息科技是一家以高科技数码产品开发为主导，集移动电话、平板电脑、工业电脑、数码影像产品研发、生产、销售、服务于一体的高科技企业;公司拥有一批高级工程技术人才，具有较强的软件、硬件、结构设计开发及生产能力。
+						
+						与时信息科技是一家专业化手持式产品设计公司。主要致力于远程移动终端研发，同时紧紧围绕人性化多功能产品大市场进行战略研究。公司核心管理及技术骨干全部来自于国内、国际知名的通信技术企业，在移动射频系统、基带电路、PCB Layout、工业设计(ID)、结构设计(MD)、软件设计(SW)、生产制造(YUS产品)测试(TE)、品质保障(QA)等领域拥有丰富的从业经验，可根据客户的需求提供定制的解决方案。通过对市场的调查和分析，制订了符合市场发展需求的产品发展路线，力图依靠创新的设计理念、采用先进的芯片构架、完整的解决方案和完善的服务成为一流的手持式方案供应商
+					</p>
+				</div>	
+				
+					
+				</div>
+			</div>
+        </div>
+		<div>
+			<div class="paypal" style="width: 1200px;margin: auto">
+				<div class="alert alert-info" role="alert">{:lang('PayPal账号')}：info@shdbr.com</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="contentLeft">
+				{volist name="shop" id="data"}
+				<div class="product">
+					<h4 style="text-align: center"><b>{:lang('产品介绍')}</b></h4>
+						<div>
+							<div id="imgs" data-interval="2000" data-ride="carousel" class="carousel slide" style="width: 300px">
+							<ul class="carousel-indicators">
+							     <li data-target="#imgs" data-slide-to="0" class="active"></li>
+							     <li data-target="#imgs" data-slide-to="1"></li>
+							     <li data-target="#imgs" data-slide-to="2"></li>
+								 <li data-target="#imgs" data-slide-to="3"></li>
+							</ul>
+							
+							<div class="carousel-inner" role="listbox">
+								{if $data.id == 1}
+									<div class="item active">
+										<img class="img-responsive" src="/img/yi1.png">
+									</div>
+									<div class="item">
+										<img class="img-responsive" src="/img/yi2.png">
+									</div>
+									<div class="item">
+										<img class="img-responsive" src="/img/yi3.png">
+									</div>
+									<div class="item">
+										<img class="img-responsive" src="/img/yi4.png">
+									</div>
+								{else /}
+									<div class="item active">
+										<img class="img-responsive" src="/img/k1.png">
+									</div>
+									<div class="item">
+										<img class="img-responsive" src="/img/k2.png">
+									</div>
+									<div class="item">
+										<img class="img-responsive" src="/img/k3.png">
+									</div>
+									<div class="item">
+										<img class="img-responsive" src="/img/k4.png">
+									</div>
+								{/if}
+
+							</div>
+						</div>
+						<div>
+							<h4><b>{:lang('产品编号')}：</b><span class="label label-default"></span>{$data.sn}</h4>
+							<h4><b>{:lang('产品名称')}：</b><span class="label label-default"></span>{$data.name}</h4>
+							<h4><b>{:lang('数量')}：</b><span class="label label-default"></span>{:lang('50只/包裹')}</h4>
+							<h4><b>{:lang('包裹价格')}：</b><span class="label label-default"></span>{$data.price}</h4>
+							<h4><b>{:lang('介绍')}：</b><span class="label label-default"></span>{$data.content}</h4>
+						</div>
+					 </div>
+				</div>
+				{/volist}
+			</div>
+			<div class="contentRight">
+				<div>
+					<div>
+					    <div class="page-header">
+					        <h4>{:lang('请认真填写并且提交，等待管理员审核，审核通过后，会及时发货')}</h4>
+					    </div>
+					</div>
+					<div class="alert alert-danger" role="alert">{:lang('注意：每个包裹50只口罩，每人每次限购一包')}</div>
+					<div>
+					    <form class="form-horizontal" action="{:url('Index/index')}" method='post' enctype="multipart/form-data">
+
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-3 control-label">{:lang('产品编号')}:</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" name="sn" id="sn" placeholder="{:lang('产品编号')}">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-3 control-label">{:lang('捐赠人邮箱')}:</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" name="juan_email" id="email" placeholder="{:lang('捐赠人邮箱')}">
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-3 control-label">{:lang('受捐者姓名')}:</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" name="shou_name" id="shou_name" placeholder="{:lang('受捐者姓名')}">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-3 control-label">{:lang('受捐者号码')}:</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" name="shou_phone" id="shou_phone" placeholder="{:lang('受捐者号码')}">
+								</div>
+							</div>
+					
+					        <div class="form-group">
+					            <label for="inputPassword3" class="col-sm-3 control-label">{:lang('受捐者邮编')}:</label>
+					            <div class="col-sm-9">
+					                <input type="text" class="form-control" name="shou_zip" id="shou_zip" placeholder="{:lang('受捐者邮编')}">
+					            </div>
+					        </div>
+
+					        <div class="form-group">
+					            <label for="inputEmail3" class="col-sm-3 control-label">{:lang('收货地址')}:</label>
+					            <div class="col-sm-9">
+					                <input type="text" class="form-control" name="shou_address" id="shou_address" placeholder="{:lang('收货地址')}">
+					            </div>
+					        </div>
+					
+					        <div class="form-group">
+					            <label for="inputEmail3" class="col-sm-3 control-label">{:lang('支付凭证')}:</label>
+					            <div class="col-sm-9">
+					                <a href="javascript:;" class="file">{:lang('选择文件')}
+										<input type="file" name="file" id="file1">
+					                </a>
+					            </div>
+					        </div>
+
+					        <div class="form-group">
+					            <div class="col-sm-offset-3 col-sm-9">
+					                <button type="submit" id="button" class="btn btn-default">{:lang('提交')}</button>
+					            </div>
+					        </div>
+					    </form>
+					</div>
+			</div>
+		</div>
+    </div>
+
+	<script src="/static/js/jquery.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	<script>
+
+		$('#jumpMenu').change(function(){
+			var a =$('#jumpMenu option:selected').attr('lang');
+			//alert(a);exit;
+			var data={'lang':a};
+			$.get("{:url('Lang/lang')}",data,function(){
+				location.reload();
+			})
+		})
+
+	</script>
+
+</body>
+</html>

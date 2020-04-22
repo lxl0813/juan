@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <title>Title</title>
+    <script src="/admin/js/jquery.js"></script>
+    <script type="text/javascript" src="/layer/layer.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div style="text-align:center"><h1 >海外捐赠后台— —订购信息管理</h1></div>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th style="text-align: center;">捐赠人邮箱</th>
+                <th style="text-align: center;">支付凭证</th>
+                <th style="text-align: center;">购买商品</th>
+                <th style="text-align: center;">受捐人姓名</th>
+                <th style="text-align: center;">受捐人电话</th>
+                <th style="text-align: center;">邮编</th>
+                <th style="text-align: center;">收货地址</th>
+                <th style="text-align: center;">时间</th>
+                <th style="text-align: center;">状态/操作</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {foreach $data as $key=>$vo }
+                 <tr>
+                     <td style="text-align: center;vertical-align: middle;width:8%;" >{$vo.juan_email}</td>
+                     <td style="text-align: center;vertical-align: middle;width:8%;"><a href='javascript:void(0);' onclick="img_show('图片详情','{:url('Index/img')}','{$vo.pz}')"><img src="{$vo.pz}" class="img" style="width:80px;height:80px"></a></td>
+                     <td style="text-align:center;vertical-align: middle;width:9%;">{$vo.shop_name}</td>
+                     <td style="text-align: center;vertical-align: middle;width:9%;">{$vo.shou_name}</td>
+                     <td style="text-align: center;vertical-align: middle;width:8%;">{$vo.shou_phone}</td>
+                     <td style="text-align: center;vertical-align: middle;width:7%;">{$vo.shou_zip}</td>
+                     <td style="text-align: center;vertical-align: middle;width:15%;">{$vo.shou_address}</td>
+                     <td style="text-align: center;vertical-align: middle;width:9%;">{$vo.time_all}</td>
+                     <td style="text-align: center;vertical-align: middle;width:9%;">
+                            {if $vo.status == 0}
+                                待审核 | <span id="{$vo.id}" class="success" ><a href="javascript:void(0)">完成</a></span> | <span id="{$vo.id}" class="error"><a href="javascript:void(0)">驳回</a></span>
+                            {elseif $vo.status == 1}
+                                已完成
+                            {else /}
+                                被驳回
+                            {/if}
+                     </td>
+                 </tr>
+            {/foreach}
+        </tbody>
+    </table>
+    <div style="text-align: center">{$page}</div>
+
+    <script>
+        $(".success").click(function(){
+            var id = $(this).attr('id');
+            $.ajax({
+                type:"POST",
+                url:"{:url('Index/ok')}",
+                data:{
+                    id:id,
+                },
+                dataType:"json",
+                success:function(data){
+                    if(data.status==1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();//刷新当前页面.
+                        },1000)
+                    }
+                }
+            })
+        })
+
+        $(".error").click(function(){
+            var id = $(this).attr('id');
+            $.ajax({
+                type:"POST",
+                url:"{:url('Index/no')}",
+                data:{
+                    id:id,
+                },
+                dataType:"json",
+                success:function(data){
+                    if(data.status==1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();//刷新当前页面.
+                        },1000)
+                    }
+                }
+            })
+        })
+
+       function img_show(title,url,img){
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url+'?img='+img
+        });
+        layer.full(index);
+        }
+
+
+
+    </script>
+
+</body>
+</html>

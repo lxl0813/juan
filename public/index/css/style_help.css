@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+html,body,div,span,applet,object,iframe,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,strong,tt,var,dl,dt,dd,blockquote,fieldset,form,i,b,caption,tbody,tfoot,thead,tr,th {
+	margin:0;padding:0;vertical-align:baseline
+}
+
+body {
+     background:#fff; color: #333; font:90%/1.5em Tahoma, Helvetica, "Liberation sans", "Bitstream Vera Sans", sans-serif;position:relative;
+	  line-height: 1.4em;
+	  padding:5px;
+}
+a {color:#0577a6; font-weight:normal; font-size:1.05em;}
+a img {border:none;}
+img {border:none;}
+p   {
+     font-style: normal;
+     font-weight: normal;
+     font-color: #000000;
+     text-transform: normal;
+     letter-spacing: normal;
+}
+h1 {
+	font-size: 22px;
+	margin: 0 0 15px 0;
+	color: #333;
+    line-height:normal;
+}
+h2 {
+	font-size: 17px;
+	margin: 2px 0 5px 0;
+	line-height: 1.4em;
+	color: #2498c8;
+	text-align: left;
+}
+.container {
+	margin: auto;
+	min-width:400px;
+	max-width:840px;
+	-moz-box-shadow: 0 0 3px #cecccc;
+	-webkit-box-shadow: 0 0 3px #cecccc;
+	box-shadow: 0 0 5px #cecccc;
+	border:2px solid #cecccc;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	margin-top:5px;
+	margin-bottom:10px;
+	padding:10px;
+        background-color: #fff;
+}
+li {
+	margin:0 0 10px 0;
+}
+#header {
+	width:960px;
+	height:95px;
+	margin:auto;
+}
+#content {
+	margin:0 0 0 14px;
+	padding: 5px 10px 5px 22px;
+	position:relative;
+	width: 900px;
+	float: left;
+}
+.footerSpace {
+	padding-top:10px;
+	padding-bottom:20px;
+	}
+.copy {
+	width:100%;
+	text-align:center;
+	font-size:10px;
+	color:#color: #666;
+	display:block;
+	}
+.footerSpaceSub {
+	padding-top:10px;
+	padding-bottom:20px;
+    width:900px;
+    text-align:center;
+    float:none;
+}
+
+
+#footer {
+	float: right;
+	margin: 0 20px 0 0;
+	padding: 15px 0 0 0;
+	width: 900px;
+	text-align:center;
+}
+#footer span a {font-size:1em; font-weight:normal; text-decoration:none; color:#666666;}
+#footer span a:hover {font-size:1em; font-weight:normal; text-decoration:underline; color:#e35b2a;}
+#footer span {margin-right:20px;
+width:900px;}
+
+.left {float:left} .right {float:right} .clear{clear:both}
+.lang {
+	float:right;
+	height:30px;
+	width:300px;
+	margin:5px 18px 10px 0;
+	text-align:right;
+	z-index:600;
+	position:relative;
+}
+.lang form {
+ margin:0;
+ padding:0;
+ display:inline;
+ }
+ 
+ .signup_error {
+    margin-top: 4px;
+    margin-left: 4px;
+    font: 15px Verdana;
+    color: #8b0000;
+ }
+  .subscribe {
+	float: left;
+	margin-left: 2%;
+	margin-top: 70px;
+	text-align: left;
+	width: 180px;
+	height:180px;
+	padding:80px 0 20px 80px;
+	background:url(../image/subscribe.jpg) no-repeat;
+	font-size:16px;
+}
+.help_image {
+	width: 380px;
+	height: 190px;
+	padding: 0 5px 10px 5px;
+	float: left;
+	margin: 0 10px 10px 0;
+	display: block;
+	-moz-box-shadow: 0 0 2px #cecccc;
+	-webkit-box-shadow: 0 0 2px #cecccc;
+	box-shadow: 0 0 3px #cecccc;
+	border:2px solid #cecccc;
+	border-radius:6px;
+	-moz-border-radius:6px;
+	text-align:left;
+}
+.help_text {
+		width: 380px;
+		padding: 20px 5px 10px 5px;
+		float: left;
+		margin: 0 10px 10px 0;
+		display: block;
+		-moz-box-shadow: 0 0 2px #cecccc;
+		-webkit-box-shadow: 0 0 2px #cecccc;
+		box-shadow: 0 0 3px #cecccc;
+		border:2px solid #cecccc;
+		border-radius:6px;
+		-moz-border-radius:6px;
+		text-align:left;
+}
+ .help_text span {
+		margin: -20px 0 0 -5px;
+		padding: 5px 3px 5px 5px;
+		font-size: 14px;
+		display: block;
+		position: absolute;
+		width: 383px;
+		line-height: 16px;
+		border-bottom: 4px solid #E1E5E7;
+		background: url(../image/bgr_hdr_hlp.png) repeat-x bottom;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align:left;
+}
+.help_image span {
+		margin: 0 0 0 -5px;
+		padding: 5px 3px 5px 5px;
+		font-size: 14px;
+		display: block;
+		position: absolute;
+		width: 383px;
+		line-height: 16px;
+		border-bottom: 4px solid #E1E5E7;
+		background: url(../image/bgr_hdr_hlp.png) repeat-x bottom;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align:left;
+}
+.help_image strong, .help_text strong{
+color: #C83C09;
+}
